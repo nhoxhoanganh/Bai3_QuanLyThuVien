@@ -1,0 +1,9 @@
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.pdb
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csprojResolveAssemblyReference.cache
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Form1.resources
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
+D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
