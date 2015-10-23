@@ -10,7 +10,7 @@ namespace QL_ThuVien
 {
     public class Sach
     {
-        string strcon = @"Data Source=ChiConCaiTen\SQLEXPRESS;Initial Catalog=QL_ThuVien;Integrated Security=True";
+        string strcon = @"Data Source=PHAMVANLUONG\SQLEXPRESS;Initial Catalog=QL_ThuVien;Integrated Security=True";
         public DataTable Show()
         {
             DataTable dt = new DataTable();
