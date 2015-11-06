@@ -7,12 +7,28 @@ D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_T
 D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
 D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
 D:\dung\Kì I - Năm 4\CN WEB\demo_programs\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.pdb
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csprojResolveAssemblyReference.cache
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Form1.resources
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
-E:\Githubs\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.pdb
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csprojResolveAssemblyReference.cache
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Form1.resources
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
+E:\Clone\QL_ThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csprojResolveAssemblyReference.cache
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.pdb
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\BangThuVien.dll
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\KetNoiDB.dll
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\BangThuVien.pdb
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\KetNoiDB.pdb
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTAILIEU.resources
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb

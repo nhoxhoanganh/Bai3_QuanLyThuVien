@@ -1,0 +1,7 @@
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.csprojResolveAssemblyReference.cache
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.dll
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.pdb
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.dll
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.pdb
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.dll
+E:\Clone\Bai3_QLThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.pdb
