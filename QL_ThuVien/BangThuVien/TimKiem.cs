@@ -57,5 +57,20 @@ namespace BangThuVien
             da.Fill(dt);
             return dt;
         }
+        // Tìm kiếm Ban doc theo mã
+        public DataTable TKTL_MaBD(string MaBD)
+        {
+            string sql = "SELECT * FROM BanDoc WHERE MaBD LIKE N'%' + @MaBD + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@MaBD", MaBD);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+
+        }
     }
 }
