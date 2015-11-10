@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -48,6 +53,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,15 +68,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -105,6 +105,51 @@
             this.groupBox1.Size = new System.Drawing.Size(970, 179);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(847, 55);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 42);
+            this.btnXoa.TabIndex = 22;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(745, 109);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 42);
+            this.btnHuy.TabIndex = 21;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(745, 55);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 42);
+            this.btnSua.TabIndex = 20;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(643, 109);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 42);
+            this.btnLuu.TabIndex = 19;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(643, 55);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 42);
+            this.btnThem.TabIndex = 18;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -265,6 +310,44 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(517, 32);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiem.TabIndex = 3;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(292, 34);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(194, 20);
+            this.textBox8.TabIndex = 2;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Mã Bạn đọc",
+            "Họ tên",
+            "CMND",
+            "Mã lớp"});
+            this.comboBox2.Location = new System.Drawing.Point(128, 34);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(137, 21);
+            this.comboBox2.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Tìm kiếm theo:";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
@@ -357,89 +440,6 @@
             this.Column9.HeaderText = "DienThoai";
             this.Column9.Name = "Column9";
             // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(643, 55);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 42);
-            this.btnThem.TabIndex = 18;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(643, 109);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 42);
-            this.btnLuu.TabIndex = 19;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(745, 55);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 42);
-            this.btnSua.TabIndex = 20;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(745, 109);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 42);
-            this.btnHuy.TabIndex = 21;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(847, 55);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 42);
-            this.btnXoa.TabIndex = 22;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 37);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Tìm kiếm theo:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Mã Bạn đọc",
-            "Họ tên",
-            "CMND",
-            "Mã lớp"});
-            this.comboBox2.Location = new System.Drawing.Point(128, 34);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(137, 21);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(292, 34);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(194, 20);
-            this.textBox8.TabIndex = 2;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(517, 32);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiem.TabIndex = 3;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
             // DocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,7 +449,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "DocGia";
-            this.Text = "DocGia";
+            this.Text = "Độc Giả";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

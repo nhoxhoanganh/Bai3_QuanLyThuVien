@@ -21,5 +21,9 @@ namespace QL_ThuVien
 
         BUS_BanDoc bd = new BUS_BanDoc();
 
+        public void MoDK()
+        {
+
+        }
     }
 }
