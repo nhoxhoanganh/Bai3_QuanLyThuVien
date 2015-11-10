@@ -57,8 +57,9 @@ namespace BangThuVien
             da.Fill(dt);
             return dt;
         }
-        // Tìm kiếm Ban doc theo mã
-        public DataTable TKTL_MaBD(string MaBD)
+
+        // Tìm kiếm độc giả theo mã đọc giả
+        public DataTable TKDG_MaDG(string MaBD)
         {
             string sql = "SELECT * FROM BanDoc WHERE MaBD LIKE N'%' + @MaBD + '%'";
             DataTable dt = new DataTable();
@@ -70,7 +71,51 @@ namespace BangThuVien
             da.SelectCommand = cmd;
             da.Fill(dt);
             return dt;
+        }
 
+        // TK độc giả theo họ tên
+        public DataTable TKDG_TenDG(string HoTen)
+        {
+            string sql = "SELECT * FROM BanDoc WHERE HoTen LIKE N'%' + @HoTen + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@HoTen", HoTen);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
+
+        //TK độc giả theo CMND
+        public DataTable TKDG_CMND(string CMND)
+        {
+            string sql = "SELECT * FROM BanDoc WHERE CMND LIKE N'%' + @CMND + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@CMND", CMND);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
+        }
+
+        // TK độc giả theo mã lớp
+        public DataTable TKDG_MaLop(string MaLop)
+        {
+            string sql = "SELECT * FROM BanDoc WHERE MaLop LIKE N'%' + @MaLop + '%'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter();
+            cmd.Parameters.AddWithValue("@MaLop", MaLop);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            return dt;
         }
     }
 }
