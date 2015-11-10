@@ -103,7 +103,6 @@
             this.groupBox1.Size = new System.Drawing.Size(907, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // btnHuy
             // 
@@ -298,7 +297,6 @@
             this.groupBox2.Size = new System.Drawing.Size(907, 48);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // txttk_Tacgia
             // 
@@ -370,7 +368,6 @@
             this.groupBox3.Size = new System.Drawing.Size(907, 201);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // dgvTaiLieu
             // 
