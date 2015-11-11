@@ -129,16 +129,16 @@ namespace QL_ThuVien
             dgvTaiLieu.DataSource = tk.TKTL_MaTL(txttk_MaTL.Text);
             
         }
+        private void txttkTacGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvTaiLieu.DataSource = tk.TKTL_TacGia(txttk_Tacgia.Text);
+        }
 
         private void txttkNhanDe_TextChanged(object sender, EventArgs e)
         {
             dgvTaiLieu.DataSource = tk.TKTL_NhanDe(txttk_NhanDe.Text);
         }
 
-        private void txttkTacGia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dgvTaiLieu.DataSource = tk.TKTL_TacGia(txttk_Tacgia.Text);
-        }
-
+       
     }
 }
