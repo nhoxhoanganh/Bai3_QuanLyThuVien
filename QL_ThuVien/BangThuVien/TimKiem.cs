@@ -57,14 +57,15 @@ namespace BangThuVien
             da.Fill(dt);
             return dt;
         }
-<<<<<<< HEAD
         // Tìm kiếm Ban doc theo mã
-        public DataTable TKBD_MaBD(string MaBD)
-=======
+        public DataTable TKBD_MaBD(string MaBD) 
+       { DataTable dt = new DataTable();
+            return dt;
+
+        }
 
         // Tìm kiếm độc giả theo mã đọc giả
         public DataTable TKDG_MaDG(string MaBD)
->>>>>>> 3a9d31e6045a0b803c0d444d0233f93c7aa4874d
         {
             string sql = "SELECT * FROM BanDoc WHERE MaBD LIKE N'%' + @MaBD + '%'";
             DataTable dt = new DataTable();
