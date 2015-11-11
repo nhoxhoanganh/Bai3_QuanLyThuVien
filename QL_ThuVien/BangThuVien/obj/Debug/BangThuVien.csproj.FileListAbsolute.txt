@@ -12,3 +12,10 @@ E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVie
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.csprojResolveAssemblyReference.cache
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.dll
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.dll
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.dll
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.csprojResolveAssemblyReference.cache
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.dll
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.pdb

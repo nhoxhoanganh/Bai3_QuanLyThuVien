@@ -72,6 +72,7 @@ namespace QL_ThuVien
         private void btnThem_Click(object sender, EventArgs e)
         {
             MoDK();
+            txtMa.Enabled = false;
             SetNull();
             chon = 1;
         }

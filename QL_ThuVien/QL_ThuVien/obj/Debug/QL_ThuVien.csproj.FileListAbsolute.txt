@@ -46,3 +46,17 @@ E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTAILIEU.resources
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\BangThuVien.dll
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\KetNoiDB.dll
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\BangThuVien.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\bin\Debug\KetNoiDB.pdb
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csprojResolveAssemblyReference.cache
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.DocGia.resources
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTAILIEU.resources
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
