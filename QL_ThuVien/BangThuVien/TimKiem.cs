@@ -58,12 +58,6 @@ namespace BangThuVien
             return dt;
         }
         // Tìm kiếm Ban doc theo mã
-        public DataTable TKBD_MaBD(string MaBD) 
-       { DataTable dt = new DataTable();
-            return dt;
-
-        }
-
         // Tìm kiếm độc giả theo mã đọc giả
         public DataTable TKDG_MaDG(string MaBD)
         {
