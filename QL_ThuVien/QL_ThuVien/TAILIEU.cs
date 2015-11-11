@@ -62,7 +62,7 @@ namespace QL_ThuVien
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa Tài liệu này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 _tailieu.XoaTaiLieu(txtMaTL.Text);
                 MessageBox.Show("Xóa thành công!");
