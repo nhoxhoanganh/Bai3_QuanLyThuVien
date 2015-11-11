@@ -12,7 +12,7 @@ namespace KetNoiDB
 
         public static String connect()
         {
-            return (@"Data Source=HOA_LONG\SQLEXPRESS;Initial Catalog=QL_ThuVien;Integrated Security=true;");
+            return (@"Data Source=NHOXHOANGANH\SQLEXPRESS;Initial Catalog=QL_ThuVien;Integrated Security=true;");
         }
     }
 }
