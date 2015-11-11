@@ -16,7 +16,7 @@ namespace QL_ThuVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DocGia());
+            Application.Run(new frmTAILIEU());
         }
     }
 }
