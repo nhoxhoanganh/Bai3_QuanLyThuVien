@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMaTheLoai = new System.Windows.Forms.ComboBox();
+            this.cbMaNXB = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -66,8 +68,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbMaNXB = new System.Windows.Forms.ComboBox();
-            this.cbMaTheLoai = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,6 +76,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.cbMaTheLoai);
             this.groupBox1.Controls.Add(this.cbMaNXB);
             this.groupBox1.Controls.Add(this.btnHuy);
@@ -103,6 +104,48 @@
             this.groupBox1.Size = new System.Drawing.Size(907, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cbMaTheLoai
+            // 
+            this.cbMaTheLoai.FormattingEnabled = true;
+            this.cbMaTheLoai.Items.AddRange(new object[] {
+            "TL001",
+            "TL002",
+            "TL003",
+            "TL004",
+            "TL005",
+            "TL006",
+            "TL007",
+            "TL008",
+            "TL009",
+            "TL010",
+            "TL011",
+            "TL012",
+            "TL013",
+            "TL014"});
+            this.cbMaTheLoai.Location = new System.Drawing.Point(483, 55);
+            this.cbMaTheLoai.Name = "cbMaTheLoai";
+            this.cbMaTheLoai.Size = new System.Drawing.Size(133, 21);
+            this.cbMaTheLoai.TabIndex = 49;
+            // 
+            // cbMaNXB
+            // 
+            this.cbMaNXB.FormattingEnabled = true;
+            this.cbMaNXB.Items.AddRange(new object[] {
+            "NXB001",
+            "NXB002",
+            "NXB003",
+            "NXB004",
+            "NXB005",
+            "NXB006",
+            "NXB007",
+            "NXB008",
+            "NXB009",
+            "NXB010"});
+            this.cbMaNXB.Location = new System.Drawing.Point(483, 94);
+            this.cbMaNXB.Name = "cbMaNXB";
+            this.cbMaNXB.Size = new System.Drawing.Size(133, 21);
+            this.cbMaNXB.TabIndex = 48;
             // 
             // btnHuy
             // 
@@ -430,48 +473,6 @@
             this.Column8.DataPropertyName = "MaNXB";
             this.Column8.HeaderText = "Mã NXB";
             this.Column8.Name = "Column8";
-            // 
-            // cbMaNXB
-            // 
-            this.cbMaNXB.FormattingEnabled = true;
-            this.cbMaNXB.Items.AddRange(new object[] {
-            "NXB001",
-            "NXB002",
-            "NXB003",
-            "NXB004",
-            "NXB005",
-            "NXB006",
-            "NXB007",
-            "NXB008",
-            "NXB009",
-            "NXB010"});
-            this.cbMaNXB.Location = new System.Drawing.Point(483, 94);
-            this.cbMaNXB.Name = "cbMaNXB";
-            this.cbMaNXB.Size = new System.Drawing.Size(133, 21);
-            this.cbMaNXB.TabIndex = 48;
-            // 
-            // cbMaTheLoai
-            // 
-            this.cbMaTheLoai.FormattingEnabled = true;
-            this.cbMaTheLoai.Items.AddRange(new object[] {
-            "TL001",
-            "TL002",
-            "TL003",
-            "TL004",
-            "TL005",
-            "TL006",
-            "TL007",
-            "TL008",
-            "TL009",
-            "TL010",
-            "TL011",
-            "TL012",
-            "TL013",
-            "TL014"});
-            this.cbMaTheLoai.Location = new System.Drawing.Point(483, 55);
-            this.cbMaTheLoai.Name = "cbMaTheLoai";
-            this.cbMaTheLoai.Size = new System.Drawing.Size(133, 21);
-            this.cbMaTheLoai.TabIndex = 49;
             // 
             // frmTAILIEU
             // 
