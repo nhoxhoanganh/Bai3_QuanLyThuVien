@@ -60,9 +60,12 @@ namespace BangThuVien
 <<<<<<< HEAD
 =======
         // Tìm kiếm Ban doc theo mã
+<<<<<<< HEAD
         //public DataTable TKBD_MaBD(string MaBD);
 >>>>>>> c440d652707baefcd3b80e71f1d260e2cb8d6347
 
+=======
+>>>>>>> 32a10882999b2f7300d078052a93c2e4fbe79f3a
         // Tìm kiếm độc giả theo mã đọc giả
         public DataTable TKDG_MaDG(string MaBD)
         {
