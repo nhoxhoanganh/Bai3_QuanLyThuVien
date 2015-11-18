@@ -23,7 +23,7 @@ namespace QL_ThuVien
 
         void KhoaDieuKhien()
         {
-            txtMaTL.Enabled = txtTG.Enabled = txtNhanDe.Enabled = txtSoLuong.Enabled = txtNgonNgu.Enabled = txtMaTheLoai.Enabled = txtMaNXB.Enabled = txtDoMat.Enabled = false;
+            txtTG.Enabled = txtNhanDe.Enabled = txtSoLuong.Enabled = txtNgonNgu.Enabled = cbMaTheLoai.Enabled = cbMaNXB.Enabled = txtDoMat.Enabled = false;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
             
@@ -31,14 +31,14 @@ namespace QL_ThuVien
 
         void MoDieuKhien()
         {
-            txtMaTL.Enabled = txtTG.Enabled = txtNhanDe.Enabled = txtSoLuong.Enabled = txtNgonNgu.Enabled = txtMaTheLoai.Enabled = txtMaNXB.Enabled = txtDoMat.Enabled = true;
+            txtTG.Enabled = txtNhanDe.Enabled = txtSoLuong.Enabled = txtNgonNgu.Enabled = cbMaTheLoai.Enabled = cbMaNXB.Enabled = txtDoMat.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled =false;
             btnLuu.Enabled = true;
         }
 
         void SetNull()
         {
-            txtDoMat.Text = txtMaNXB.Text = txtMaTL.Text = txtMaTheLoai.Text = txtNgonNgu.Text = txtNhanDe.Text = txtSoLuong.Text = txtTG.Text = "";
+            txtDoMat.Text = cbMaNXB.Text = txtMaTL.Text = cbMaTheLoai.Text = txtNgonNgu.Text = txtNhanDe.Text = txtSoLuong.Text = txtTG.Text = "";
             txttk_MaTL.Text = txttk_NhanDe.Text = txttk_Tacgia.Text = "";
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -75,12 +75,12 @@ namespace QL_ThuVien
         {
             if (chon == 1)
             {
-                if (txtNhanDe.Text == "" || txtTG.Text == "" || txtSoLuong.Text == "" || txtMaTheLoai.Text == "" || txtMaNXB.Text == "" || txtDoMat.Text == "" || txtNgonNgu.Text == "")
+                if (txtNhanDe.Text == "" || txtTG.Text == "" || txtSoLuong.Text == "" || cbMaTheLoai.Text == "" || cbMaNXB.Text == "" || txtDoMat.Text == "" || txtNgonNgu.Text == "")
                     MessageBox.Show("Mời nhập đầy đủ thông tin!");
                 else
                     if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        _tailieu.ThemTaiLieu(txtTG.Text, txtNhanDe.Text, int.Parse(txtSoLuong.Text), int.Parse(txtDoMat.Text), txtNgonNgu.Text, txtMaTheLoai.Text, txtMaNXB.Text);
+                        _tailieu.ThemTaiLieu(txtTG.Text, txtNhanDe.Text, int.Parse(txtSoLuong.Text), int.Parse(txtDoMat.Text), txtNgonNgu.Text, cbMaTheLoai.Text, cbMaNXB.Text);
                         MessageBox.Show("Thêm thành công!");
                         SetNull();
                         frmTAILIEU_Load(sender, e);
@@ -88,12 +88,12 @@ namespace QL_ThuVien
             }
             else if (chon == 2)
             {
-                if (txtNhanDe.Text == "" || txtTG.Text == "" || txtSoLuong.Text == "" || txtMaTheLoai.Text == "" || txtMaNXB.Text == "" || txtDoMat.Text == "" || txtNgonNgu.Text == "")
+                if (txtNhanDe.Text == "" || txtTG.Text == "" || txtSoLuong.Text == "" || cbMaTheLoai.Text == "" || cbMaNXB.Text == "" || txtDoMat.Text == "" || txtNgonNgu.Text == "")
                     MessageBox.Show("Mời nhập đầy đủ thông tin!");
                 else
                     if (DialogResult.Yes == MessageBox.Show("Bạn có muốn Sửa nhân viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        _tailieu.SuaTaiLieu(txtMaTL.Text,txtTG.Text, txtNhanDe.Text, int.Parse(txtSoLuong.Text), int.Parse(txtDoMat.Text), txtNgonNgu.Text, txtMaTheLoai.Text, txtMaNXB.Text);
+                        _tailieu.SuaTaiLieu(txtMaTL.Text,txtTG.Text, txtNhanDe.Text, int.Parse(txtSoLuong.Text), int.Parse(txtDoMat.Text), txtNgonNgu.Text, cbMaTheLoai.Text, cbMaNXB.Text);
                         MessageBox.Show("Sửa thành công!");
                         SetNull();
                         frmTAILIEU_Load(sender, e);
@@ -111,8 +111,8 @@ namespace QL_ThuVien
                 txtSoLuong.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtDoMat.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtNgonNgu.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtMaTheLoai.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtMaNXB.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[7].Value.ToString();
+                cbMaTheLoai.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[6].Value.ToString();
+                cbMaNXB.Text = dgvTaiLieu.Rows[e.RowIndex].Cells[7].Value.ToString();
             }
             catch { }
         }
@@ -129,16 +129,16 @@ namespace QL_ThuVien
             dgvTaiLieu.DataSource = tk.TKTL_MaTL(txttk_MaTL.Text);
             
         }
+        private void txttkTacGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvTaiLieu.DataSource = tk.TKTL_TacGia(txttk_Tacgia.Text);
+        }
 
         private void txttkNhanDe_TextChanged(object sender, EventArgs e)
         {
             dgvTaiLieu.DataSource = tk.TKTL_NhanDe(txttk_NhanDe.Text);
         }
 
-        private void txttkTacGia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dgvTaiLieu.DataSource = tk.TKTL_TacGia(txttk_Tacgia.Text);
-        }
-
+       
     }
 }

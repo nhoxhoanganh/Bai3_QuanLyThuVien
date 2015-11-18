@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMaTheLoai = new System.Windows.Forms.ComboBox();
+            this.cbMaNXB = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtMaNXB = new System.Windows.Forms.TextBox();
-            this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.txtNgonNgu = new System.Windows.Forms.TextBox();
             this.txtDoMat = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -76,13 +76,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.cbMaTheLoai);
+            this.groupBox1.Controls.Add(this.cbMaNXB);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.txtMaNXB);
-            this.groupBox1.Controls.Add(this.txtMaTheLoai);
             this.groupBox1.Controls.Add(this.txtNgonNgu);
             this.groupBox1.Controls.Add(this.txtDoMat);
             this.groupBox1.Controls.Add(this.txtSoLuong);
@@ -103,6 +104,48 @@
             this.groupBox1.Size = new System.Drawing.Size(907, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cbMaTheLoai
+            // 
+            this.cbMaTheLoai.FormattingEnabled = true;
+            this.cbMaTheLoai.Items.AddRange(new object[] {
+            "TL001",
+            "TL002",
+            "TL003",
+            "TL004",
+            "TL005",
+            "TL006",
+            "TL007",
+            "TL008",
+            "TL009",
+            "TL010",
+            "TL011",
+            "TL012",
+            "TL013",
+            "TL014"});
+            this.cbMaTheLoai.Location = new System.Drawing.Point(483, 55);
+            this.cbMaTheLoai.Name = "cbMaTheLoai";
+            this.cbMaTheLoai.Size = new System.Drawing.Size(133, 21);
+            this.cbMaTheLoai.TabIndex = 49;
+            // 
+            // cbMaNXB
+            // 
+            this.cbMaNXB.FormattingEnabled = true;
+            this.cbMaNXB.Items.AddRange(new object[] {
+            "NXB001",
+            "NXB002",
+            "NXB003",
+            "NXB004",
+            "NXB005",
+            "NXB006",
+            "NXB007",
+            "NXB008",
+            "NXB009",
+            "NXB010"});
+            this.cbMaNXB.Location = new System.Drawing.Point(483, 94);
+            this.cbMaNXB.Name = "cbMaNXB";
+            this.cbMaNXB.Size = new System.Drawing.Size(133, 21);
+            this.cbMaNXB.TabIndex = 48;
             // 
             // btnHuy
             // 
@@ -154,20 +197,6 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtMaNXB
-            // 
-            this.txtMaNXB.Location = new System.Drawing.Point(483, 96);
-            this.txtMaNXB.Name = "txtMaNXB";
-            this.txtMaNXB.Size = new System.Drawing.Size(133, 20);
-            this.txtMaNXB.TabIndex = 42;
-            // 
-            // txtMaTheLoai
-            // 
-            this.txtMaTheLoai.Location = new System.Drawing.Point(483, 57);
-            this.txtMaTheLoai.Name = "txtMaTheLoai";
-            this.txtMaTheLoai.Size = new System.Drawing.Size(133, 20);
-            this.txtMaTheLoai.TabIndex = 41;
-            // 
             // txtNgonNgu
             // 
             this.txtNgonNgu.Location = new System.Drawing.Point(483, 18);
@@ -205,6 +234,7 @@
             // 
             // txtMaTL
             // 
+            this.txtMaTL.Enabled = false;
             this.txtMaTL.Location = new System.Drawing.Point(196, 18);
             this.txtMaTL.Name = "txtMaTL";
             this.txtMaTL.Size = new System.Drawing.Size(133, 20);
@@ -474,8 +504,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtMaNXB;
-        private System.Windows.Forms.TextBox txtMaTheLoai;
         private System.Windows.Forms.TextBox txtNgonNgu;
         private System.Windows.Forms.TextBox txtDoMat;
         private System.Windows.Forms.TextBox txtSoLuong;
@@ -508,6 +536,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.ComboBox cbMaTheLoai;
+        private System.Windows.Forms.ComboBox cbMaNXB;
 
     }
 }

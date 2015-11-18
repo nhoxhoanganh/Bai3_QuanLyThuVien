@@ -57,7 +57,6 @@ namespace BangThuVien
             da.Fill(dt);
             return dt;
         }
-        // Tìm kiếm Ban doc theo mã
         // Tìm kiếm độc giả theo mã đọc giả
         public DataTable TKDG_MaDG(string MaBD)
         {
