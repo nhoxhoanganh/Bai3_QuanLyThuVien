@@ -12,10 +12,77 @@ namespace BangThuVien
     {
         KetNoi cn = new KetNoi();
         dbConnection dbcon = new dbConnection();
+
+        private string matl;
+
+        public string Matl
+        {
+            get { return matl; }
+            set { matl = value; }
+        }
+        private string tacgia;
+        private string nhande;
+        private int soluong;
+        private int domat;
+        private string ngonngu;
+        private string maTheLoai;
+        private string maNXB;
+
+        public string MaNXB
+        {
+            get { return maNXB; }
+            set { maNXB = value; }
+        }
+
+        public string MaTheLoai
+        {
+            get { return maTheLoai; }
+            set { maTheLoai = value; }
+        }
+
+        public string Ngonngu
+        {
+            get { return ngonngu; }
+            set { ngonngu = value; }
+        }
+
+        public int Domat
+        {
+            get { return domat; }
+            set { domat = value; }
+        }
+
+        public int Soluong
+        {
+            get { return soluong; }
+            set { soluong = value; }
+        }
+
+        public string Nhande
+        {
+            get { return nhande; }
+            set { nhande = value; }
+        }
+        public string Tacgia
+        {
+            get { return tacgia; }
+            set { tacgia = value; }
+        }
         public DataTable TimKiemTLID(string _MaTL)
         {
             DataTable dt = new DataTable();
             string str = string.Format("Select * from TaiLieu where (MaTL = @MaTL)");
+            SqlParameter[] arrPara = new SqlParameter[1];
+            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
+            arrPara[0].Value = _MaTL;
+
+            dt = dbcon.executeSelectQuery(str, arrPara);
+            return dt;
+        }
+        public DataTable TimKiemGTCBTheoMaTL(string _MaTL)
+        {
+            DataTable dt = new DataTable();
+            string str = string.Format("Select GTCB from GiaTriCaBiet where (MaTL = @MaTL)");
             SqlParameter[] arrPara = new SqlParameter[1];
             arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
             arrPara[0].Value = _MaTL;

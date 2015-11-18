@@ -87,5 +87,20 @@ namespace BangThuVien
             cmd.Dispose();
             con.Close();
         }
+        public DataTable ThongKeSachDaMuonTheoID(string _MaBD)
+        {
+            string str = string.Format("ThongKeSachDaMuon");
+            DataTable dt = new DataTable();
+
+            SqlConnection con = new SqlConnection(KetNoi.connect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaBD", _MaBD);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

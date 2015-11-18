@@ -13,12 +13,18 @@ namespace BangThuVien
     {
         dbConnection dbcon = new dbConnection();
 
-        public bool ThemPhieuMuon(string _MaBD)
+        public DataTable ThemPhieuMuon(string _MaBD)
         {
-            bool b = false;
+            DataTable dt = new DataTable();
             string str = string.Format("ThemPhieuMuon");
+            SqlParameter[] arrpara = new SqlParameter[2];
+            arrpara[0] = new SqlParameter("@MaBD", SqlDbType.NVarChar, 10);
+            arrpara[0].Value = _MaBD;
+            arrpara[1] = new SqlParameter("@TrangThai", SqlDbType.Int);
+            arrpara[1].Value = 1;
 
-            return b;
+            dt = dbcon.executeSelectProcedureQuery(str, arrpara);
+            return dt;
         }
     }
 }
