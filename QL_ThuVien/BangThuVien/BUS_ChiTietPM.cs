@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using KetNoiDB;
+using System.Data.SqlClient;
 
 namespace BangThuVien
 {
@@ -15,7 +16,7 @@ namespace BangThuVien
         public bool ThemCTPM(string MaPM, string GTCB, DateTime NgayMuon, DateTime NgayTra, DateTime NgayDK, DateTime NgayLay, string Ghichu)
         {
             bool b = false;
-            string sql = string.Format("Insert into CHITIETPHIEUMUON (MaPM, GTCB, NgayMuon, NgayTra, NgayDangky, NgayLay, GhiChu) values ( @MaPM, @GTCB, @NgayMuon,@NgayTra, @NgayDangKy, @NgayLay, @GhiChu ");
+            string sql = string.Format("Insert into CHITIETPHIEUMUON (MaPM, GTCB, NgayMuon, NgayTra, NgayDangky, NgayLay, GhiChu) values ( @MaPM, @GTCB, @NgayMuon, @NgayTra, @NgayDangKy, @NgayLay, @GhiChu )");
             SqlParameter[] arr = new SqlParameter[7];
             arr[0] = new SqlParameter("@MaPM", SqlDbType.NVarChar, 10);
             arr[0].Value = MaPM;
@@ -32,7 +33,7 @@ namespace BangThuVien
             arr[6] = new SqlParameter("@GhiChu", SqlDbType.NVarChar, 500);
             arr[6].Value = Ghichu;
 
-            b = dbcon.executeInsertProcedureQuery(sql, arr);
+            b = dbcon.executeInsertQuery(sql, arr);
             return b;
         }
     }

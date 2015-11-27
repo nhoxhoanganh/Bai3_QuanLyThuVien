@@ -94,18 +94,16 @@ namespace QL_ThuVien
                     if (dt.Rows.Count >= 1)
                     {
                         string GTCB = "";
-                        GTCB = dt.Rows[0]["GTCB"].ToString();
-                        MessageBox.Show(GTCB);
+                        GTCB = dt.Rows[0]["GTCB"].ToString();                    
 
                         string MaPM = "";
                         dt = new DataTable();
                         dt = pm.ThemPhieuMuon(txtMaBD.Text);
                         MaPM = dt.Rows[0].ItemArray.ToString();
 
-
                         bool b = ctpm.ThemCTPM(MaPM, GTCB, DateTime.Now, DateTime.Now.AddMonths(6), DateTime.Now, DateTime.Now.AddMonths(6), "");
                         if (b == false)
-                            MessageBox.Show("Them That Bại");
+                            MessageBox.Show("Them That Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
                         tl.UodateSoLuongTLID(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
                     }
                     else

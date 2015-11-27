@@ -16,7 +16,7 @@ namespace QL_ThuVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MuonSach());
+            Application.Run(new frmQLThuVien());
         }
     }
 }

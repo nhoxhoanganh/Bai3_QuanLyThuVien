@@ -56,6 +56,12 @@
     <Compile Include="MuonSach.Designer.cs">
       <DependentUpon>MuonSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLThuVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLThuVien.Designer.cs">
+      <DependentUpon>QLThuVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="TAILIEU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MuonSach.resx">
       <DependentUpon>MuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLThuVien.resx">
+      <DependentUpon>QLThuVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TAILIEU.resx">
       <DependentUpon>TAILIEU.cs</DependentUpon>
