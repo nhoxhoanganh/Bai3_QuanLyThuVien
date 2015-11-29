@@ -99,11 +99,11 @@ namespace QL_ThuVien
                         string MaPM = "";
                         dt = new DataTable();
                         dt = pm.ThemPhieuMuon(txtMaBD.Text);
-                        MaPM = dt.Rows[0].ItemArray.ToString();
-
+                        MaPM = dt.Rows[0]["MaPM"].ToString();
+                        MessageBox.Show(MaPM);
                         bool b = ctpm.ThemCTPM(MaPM, GTCB, DateTime.Now, DateTime.Now.AddMonths(6), DateTime.Now, DateTime.Now.AddMonths(6), "");
                         if (b == false)
-                            MessageBox.Show("Them That Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
+                            MessageBox.Show("Thêm Thất Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
                         tl.UodateSoLuongTLID(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
                     }
                     else
@@ -111,7 +111,7 @@ namespace QL_ThuVien
                 }
             }
 
-            if (MessageBox.Show("Mượn Thành công! Có Muốn kết thúc??", "Questio", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Mượn Thành công! Có Muốn kết thúc??", "Question", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 this.Close();
         }
     }

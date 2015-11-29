@@ -41,5 +41,10 @@ namespace QL_ThuVien
             if (MessageBox.Show("Bạn có chắc muốn thoát?", "Question", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 this.Close();
         }
+
+        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

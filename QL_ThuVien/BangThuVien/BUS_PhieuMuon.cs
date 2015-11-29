@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using KetNoiDB;
+using System.Data.SqlClient;
 
 namespace BangThuVien
 {
@@ -23,7 +24,15 @@ namespace BangThuVien
             arrpara[1] = new SqlParameter("@TrangThai", SqlDbType.Int);
             arrpara[1].Value = 1;
 
-            dt = dbcon.executeSelectProcedureQuery(str, arrpara);
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
+            con.Open();
+            
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.Parameters.AddRange(arrpara);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            //dt = dbcon.executeSelectProcedureQuery(str, arrpara);
             return dt;
         }
     }

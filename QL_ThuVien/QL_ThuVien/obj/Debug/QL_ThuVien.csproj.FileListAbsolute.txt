@@ -91,3 +91,22 @@ D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai3_QuanLyThuVien\QL_ThuVien\QL_
 >>>>>>> c440d652707baefcd3b80e71f1d260e2cb8d6347
 E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.MuonSach.resources
 E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmQLThuVien.resources
+E:\Githubs\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmHuongDan.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe.config
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.exe
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.pdb
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.exe
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\QL_ThuVien.pdb
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\BangThuVien.dll
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\KetNoiDB.dll
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\BangThuVien.pdb
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\bin\Debug\KetNoiDB.pdb
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csprojResolveAssemblyReference.cache
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.DocGia.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmHuongDan.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.MuonSach.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmQLThuVien.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTAILIEU.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTraSach.resources
