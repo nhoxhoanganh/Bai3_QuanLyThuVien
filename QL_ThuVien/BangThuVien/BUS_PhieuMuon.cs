@@ -30,6 +30,7 @@ namespace BangThuVien
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+            con.Close();
             //dt = dbcon.executeSelectProcedureQuery(str, arrpara);
             return dt;
         }

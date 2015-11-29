@@ -113,6 +113,9 @@ namespace QL_ThuVien
 
             if (MessageBox.Show("Mượn Thành công! Có Muốn kết thúc??", "Question", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 this.Close();
+            else {
+                dgvSachDaMuon.DataSource = bd.ThongKeSachDaMuonTheoID(txtMaBD.Text);
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
