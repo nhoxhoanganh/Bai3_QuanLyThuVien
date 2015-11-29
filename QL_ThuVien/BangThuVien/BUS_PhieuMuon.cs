@@ -18,11 +18,9 @@ namespace BangThuVien
         {
             DataTable dt = new DataTable();
             string str = string.Format("ThemPhieuMuon");
-            SqlParameter[] arrpara = new SqlParameter[2];
+            SqlParameter[] arrpara = new SqlParameter[1];
             arrpara[0] = new SqlParameter("@MaBD", SqlDbType.NVarChar, 10);
             arrpara[0].Value = _MaBD;
-            arrpara[1] = new SqlParameter("@TrangThai", SqlDbType.Int);
-            arrpara[1].Value = 1;
 
             SqlConnection con = new SqlConnection(AppConfig.connectionString());
             con.Open();

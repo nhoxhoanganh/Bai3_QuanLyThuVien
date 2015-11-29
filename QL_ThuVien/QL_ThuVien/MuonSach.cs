@@ -101,7 +101,7 @@ namespace QL_ThuVien
                         dt = pm.ThemPhieuMuon(txtMaBD.Text);
                         MaPM = dt.Rows[0]["MaPM"].ToString();
                         MessageBox.Show(MaPM);
-                        bool b = ctpm.ThemCTPM(MaPM, GTCB, DateTime.Now, DateTime.Now.AddMonths(6), DateTime.Now, DateTime.Now.AddMonths(6), "");
+                        bool b = ctpm.ThemCTPM(MaPM, GTCB, DateTime.Now, DateTime.Now.AddMonths(6), "");
                         if (b == false)
                             MessageBox.Show("Thêm Thất Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
                         tl.UodateSoLuongTLID(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
