@@ -44,7 +44,14 @@ namespace QL_ThuVien
 
         private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            HuongDan frm = new HuongDan();
+            frm.Show();
+        }
 
+        private void trảTàiLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTraSach frm = new frmTraSach();
+            frm.Show();
         }
     }
 }

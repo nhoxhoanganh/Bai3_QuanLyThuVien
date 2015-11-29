@@ -114,5 +114,14 @@ namespace QL_ThuVien
             if (MessageBox.Show("Mượn Thành công! Có Muốn kết thúc??", "Question", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 this.Close();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtMaBD.Text = txtMaTL.Text = "";
+            for (int i = 0; i < dgvSachDaMuon.Rows.Count; i++)
+                dgvSachDaMuon.Rows.RemoveAt(i);
+            for (int i = 0; i < dgvSachMuon.Rows.Count; i++)
+                dgvSachMuon.Rows.RemoveAt(i);
+        }
     }
 }

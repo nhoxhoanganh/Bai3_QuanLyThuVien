@@ -50,17 +50,17 @@
     <Compile Include="DocGia.Designer.cs">
       <DependentUpon>DocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHuongDan.cs">
+    <Compile Include="HuongDan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHuongDan.Designer.cs">
-      <DependentUpon>frmHuongDan.cs</DependentUpon>
+    <Compile Include="HuongDan.Designer.cs">
+      <DependentUpon>HuongDan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTraSach.cs">
+    <Compile Include="TraSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTraSach.Designer.cs">
-      <DependentUpon>frmTraSach.cs</DependentUpon>
+    <Compile Include="TraSach.Designer.cs">
+      <DependentUpon>TraSach.cs</DependentUpon>
     </Compile>
     <Compile Include="MuonSach.cs">
       <SubType>Form</SubType>
@@ -85,11 +85,11 @@
     <EmbeddedResource Include="DocGia.resx">
       <DependentUpon>DocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHuongDan.resx">
-      <DependentUpon>frmHuongDan.cs</DependentUpon>
+    <EmbeddedResource Include="HuongDan.resx">
+      <DependentUpon>HuongDan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTraSach.resx">
-      <DependentUpon>frmTraSach.cs</DependentUpon>
+    <EmbeddedResource Include="TraSach.resx">
+      <DependentUpon>TraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MuonSach.resx">
       <DependentUpon>MuonSach.cs</DependentUpon>
