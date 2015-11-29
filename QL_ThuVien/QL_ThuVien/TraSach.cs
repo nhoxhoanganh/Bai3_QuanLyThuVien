@@ -55,6 +55,8 @@ namespace QL_ThuVien
                 txtDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
                 txtEmail.Text = dt.Rows[0]["Email"].ToString();
                 txtSoDT.Text = dt.Rows[0]["DienThoai"].ToString();
+
+                dgvSachDaMuon.DataSource = bd.ThongKeSachDaMuonTheoID(txtMaBD.Text);
             }
             con.Close();
         }
@@ -84,6 +86,11 @@ namespace QL_ThuVien
                 txtTheLoai.Text = dt.Rows[0]["TenTheLoai"].ToString();
             }
             con.Close();
+            
+        }
+
+        private void btnTra_Click(object sender, EventArgs e)
+        {
             
         }
     }
