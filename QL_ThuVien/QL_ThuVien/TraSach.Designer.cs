@@ -495,6 +495,7 @@
             this.txtMaTL.Name = "txtMaTL";
             this.txtMaTL.Size = new System.Drawing.Size(133, 24);
             this.txtMaTL.TabIndex = 11;
+            this.txtMaTL.TextChanged += new System.EventHandler(this.txtMaTL_TextChanged);
             // 
             // lblMaTL
             // 

@@ -58,5 +58,33 @@ namespace QL_ThuVien
             }
             con.Close();
         }
+
+        private void txtMaTL_TextChanged(object sender, EventArgs e)
+        {
+            txtNhanDe.Text = txttacGia.Text = txtTheLoai.Text = txtNXB.Text = "";
+
+            string str = string.Format(@"SELECT     dbo.TaiLieu.NhanDe, dbo.TaiLieu.TacGia, dbo.TheLoai.TenTheLoai, dbo.NXB.TenNXB
+                                            FROM         dbo.TaiLieu INNER JOIN
+                                                            dbo.TheLoai ON dbo.TaiLieu.MaTheLoai = dbo.TheLoai.MaTheLoai INNER JOIN
+                                                            dbo.NXB ON dbo.TaiLieu.MaNXB = dbo.NXB.MaNXB 
+                                            where MaTL like '%' + '" + txtMaTL.Text + "' + '%'");
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
+            DataTable dt = new DataTable();
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                txtNhanDe.Text = dt.Rows[0]["NhanDe"].ToString();
+                txttacGia.Text = dt.Rows[0]["TacGia"].ToString();
+                txtNXB.Text = dt.Rows[0]["TenNXB"].ToString();
+                txtTheLoai.Text = dt.Rows[0]["TenTheLoai"].ToString();
+            }
+            con.Close();
+            
+        }
     }
 }
