@@ -37,3 +37,10 @@ D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai3_QuanLyThuVien\QL_ThuVien\Ban
 D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.dll
 D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.pdb
 >>>>>>> c440d652707baefcd3b80e71f1d260e2cb8d6347
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.dll
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.pdb
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.dll
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.pdb
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.csprojResolveAssemblyReference.cache
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.dll
+C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.pdb

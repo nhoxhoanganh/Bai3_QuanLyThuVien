@@ -104,23 +104,33 @@ namespace BangThuVien
         public bool UodateSoLuongTLID(string _MaTL)
         {
             bool b = false;
-            string str = string.Format("Update TaiLieu set (SoLuong = SoLuong -1) where (MaTL = @MaTL)");
-            SqlParameter[] arrPara = new SqlParameter[1];
-            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
-            arrPara[0].Value = _MaTL;
+            string str = string.Format("UpdateSLTL");
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
+            con.Open();
 
-            b = dbcon.executeUpdateQuery(str, arrPara);
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.Parameters.AddWithValue("@MaTL", _MaTL);
+            cmd.Parameters.AddWithValue("@SoLuong", -1);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (cmd.ExecuteNonQuery() > 0)
+                b = true;
+            con.Close();
             return b;
         }
         public bool UodateSoLuongTLID_TraSach(string _MaTL)
         {
             bool b = false;
-            string str = string.Format("Update TaiLieu set (SoLuong = SoLuong + 1) where (MaTL = @MaTL)");
-            SqlParameter[] arrPara = new SqlParameter[1];
-            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
-            arrPara[0].Value = _MaTL;
+            string str = string.Format("UpdateSLTL");
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
+            con.Open();
 
-            b = dbcon.executeUpdateQuery(str, arrPara);
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.Parameters.AddWithValue("@MaTL", _MaTL);
+            cmd.Parameters.AddWithValue("@SoLuong", 1);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (cmd.ExecuteNonQuery() > 0)
+                b = true;
+            con.Close();
             return b;
         }
         public DataTable HienThiTaiLieu()

@@ -36,7 +36,7 @@ namespace BangThuVien
         }
         public void UpdateTTPM_TraSach(string _MaPM)
         {
-            string str = string.Format("Update from PhieuMuon set TrangThai = -1 where MaPM = '" + _MaPM + "'");
+            string str = string.Format("Update PhieuMuon set TrangThai = -1 where MaPM = '" + _MaPM + "'");
             SqlConnection con = new SqlConnection(AppConfig.connectionString());
             con.Open();
 
@@ -44,6 +44,24 @@ namespace BangThuVien
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
             con.Close();
+        }
+        public void UpdateTrangThaiPM_TraSach(string _MaTL)
+        {
+            DataTable dt = new DataTable();
+            string str = string.Format("LayMaPM_MaTL");
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.Parameters.AddWithValue("@MaTL", _MaTL);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            con.Close();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                UpdateTTPM_TraSach(dt.Rows[i]["MaPM"].ToString());
+            }
         }
     }
 }

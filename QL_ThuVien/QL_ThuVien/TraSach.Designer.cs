@@ -267,7 +267,8 @@
             this.txtMaBD.Name = "txtMaBD";
             this.txtMaBD.ReadOnly = true;
             this.txtMaBD.Size = new System.Drawing.Size(141, 26);
-            this.txtMaBD.TabIndex = 1;            // 
+            this.txtMaBD.TabIndex = 1;
+            // 
             // lblMaBD
             // 
             this.lblMaBD.AutoSize = true;
@@ -517,7 +518,7 @@
             this.Controls.Add(this.panelBanDoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmTraSach";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trả Tài Liệu";
             this.panelBanDoc.ResumeLayout(false);
             this.panelBanDoc.PerformLayout();

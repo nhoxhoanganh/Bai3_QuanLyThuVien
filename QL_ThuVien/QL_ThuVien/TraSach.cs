@@ -92,7 +92,15 @@ namespace QL_ThuVien
 
         private void btnTra_Click(object sender, EventArgs e)
         {
-            //pm.UpdateTTPM_TraSach()
+            pm.UpdateTrangThaiPM_TraSach(txtMaTL.Text);
+            if (tl.UodateSoLuongTLID_TraSach(txtMaTL.Text) == true)
+            {
+                if (MessageBox.Show("Trả Sách Hoàn Tất. Bạn có muốn tiếp tục?", "Question", MessageBoxButtons.YesNo) == DialogResult.No)
+                    this.Close();
+            }
+            else
+                MessageBox.Show("Trả Sách Thất Bại.");
+
         }
     }
 }

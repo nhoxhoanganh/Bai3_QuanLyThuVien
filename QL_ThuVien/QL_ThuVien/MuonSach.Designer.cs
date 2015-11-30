@@ -335,7 +335,7 @@
             this.Controls.Add(this.panelDatagridview);
             this.Controls.Add(this.groupBox1);
             this.Name = "MuonSach";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mượn Sách";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -48,14 +48,15 @@
             this.panelContent.Size = new System.Drawing.Size(789, 544);
             this.panelContent.TabIndex = 1;
             // 
-            // frmHuongDan
+            // HuongDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 544);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelLeft);
-            this.Name = "frmHuongDan";
+            this.Name = "HuongDan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHuongDan";
             this.ResumeLayout(false);
 
