@@ -47,9 +47,6 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBanDoc = new System.Windows.Forms.GroupBox();
             this.dgvSachDaMuon = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +54,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panelDatagridview.SuspendLayout();
             this.gbSachMuon.SuspendLayout();
@@ -116,6 +116,7 @@
             this.txtMaBD.Name = "txtMaBD";
             this.txtMaBD.Size = new System.Drawing.Size(164, 22);
             this.txtMaBD.TabIndex = 1;
+            this.txtMaBD.TextChanged += new System.EventHandler(this.txtMaBD_TextChanged);
             // 
             // lblMaBD
             // 
@@ -250,40 +251,6 @@
             this.dgvSachDaMuon.Size = new System.Drawing.Size(409, 395);
             this.dgvSachDaMuon.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnHuy);
-            this.groupBox2.Controls.Add(this.btnOK);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(421, 30);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(114, 378);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Location = new System.Drawing.Point(16, 164);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(73, 59);
-            this.btnHuy.TabIndex = 1;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnOK
-            // 
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(16, 81);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(74, 50);
-            this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "Hoàn Tất Mượn";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "MaTL";
@@ -325,6 +292,40 @@
             this.Column6.DataPropertyName = "GhiChu";
             this.Column6.HeaderText = "Ghi Chú";
             this.Column6.Name = "Column6";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnHuy);
+            this.groupBox2.Controls.Add(this.btnOK);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(421, 30);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(114, 378);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Location = new System.Drawing.Point(16, 164);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(73, 59);
+            this.btnHuy.TabIndex = 1;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Location = new System.Drawing.Point(16, 81);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(74, 50);
+            this.btnOK.TabIndex = 0;
+            this.btnOK.Text = "Hoàn Tất Mượn";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // MuonSach
             // 

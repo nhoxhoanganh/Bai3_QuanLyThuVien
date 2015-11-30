@@ -50,6 +50,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvSachDaMuon = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMaTL = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnTra = new System.Windows.Forms.Button();
@@ -64,13 +71,6 @@
             this.lblNhanDe = new System.Windows.Forms.Label();
             this.txtMaTL = new System.Windows.Forms.TextBox();
             this.lblMaTL = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBanDoc.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -265,17 +265,16 @@
             this.txtMaBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaBD.Location = new System.Drawing.Point(59, 40);
             this.txtMaBD.Name = "txtMaBD";
+            this.txtMaBD.ReadOnly = true;
             this.txtMaBD.Size = new System.Drawing.Size(141, 26);
-            this.txtMaBD.TabIndex = 1;
-            this.txtMaBD.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
+            this.txtMaBD.TabIndex = 1;            // 
             // lblMaBD
             // 
             this.lblMaBD.AutoSize = true;
-            this.lblMaBD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaBD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaBD.Location = new System.Drawing.Point(75, 9);
             this.lblMaBD.Name = "lblMaBD";
-            this.lblMaBD.Size = new System.Drawing.Size(95, 19);
+            this.lblMaBD.Size = new System.Drawing.Size(88, 19);
             this.lblMaBD.TabIndex = 0;
             this.lblMaBD.Text = "Mã Bạn Đọc";
             // 
@@ -294,9 +293,9 @@
             // 
             this.groupBox1.Controls.Add(this.dgvSachDaMuon);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 187);
+            this.groupBox1.Location = new System.Drawing.Point(0, 171);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(811, 338);
+            this.groupBox1.Size = new System.Drawing.Size(811, 354);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sách Đã Mượn";
@@ -317,8 +316,57 @@
             this.dgvSachDaMuon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dgvSachDaMuon.Location = new System.Drawing.Point(3, 20);
             this.dgvSachDaMuon.Name = "dgvSachDaMuon";
-            this.dgvSachDaMuon.Size = new System.Drawing.Size(805, 315);
+            this.dgvSachDaMuon.Size = new System.Drawing.Size(805, 331);
             this.dgvSachDaMuon.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "MaTL";
+            this.Column1.HeaderText = "Mã TL";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "NhanDe";
+            this.Column2.HeaderText = "Nhan Đề";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "TacGia";
+            this.Column3.HeaderText = "Tác Giả";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "NgayMuon";
+            this.Column4.HeaderText = "Ngày Mượn";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "NgayTra";
+            this.Column5.HeaderText = "Ngày Trả";
+            this.Column5.Name = "Column5";
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.DataPropertyName = "HanTra";
+            this.Column7.HeaderText = "Hạn Trả";
+            this.Column7.Name = "Column7";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "GhiChu";
+            this.Column6.HeaderText = "Ghi Chú";
+            this.Column6.Name = "Column6";
             // 
             // panelMaTL
             // 
@@ -328,7 +376,7 @@
             this.panelMaTL.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMaTL.Location = new System.Drawing.Point(0, 0);
             this.panelMaTL.Name = "panelMaTL";
-            this.panelMaTL.Size = new System.Drawing.Size(811, 187);
+            this.panelMaTL.Size = new System.Drawing.Size(811, 171);
             this.panelMaTL.TabIndex = 0;
             // 
             // groupBox3
@@ -338,7 +386,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(0, 100);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(811, 87);
+            this.groupBox3.Size = new System.Drawing.Size(811, 71);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "---------------------------------------------------------------------------------" +
@@ -454,60 +502,11 @@
             // 
             this.lblMaTL.AutoSize = true;
             this.lblMaTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaTL.Location = new System.Drawing.Point(34, 27);
+            this.lblMaTL.Location = new System.Drawing.Point(18, 22);
             this.lblMaTL.Name = "lblMaTL";
-            this.lblMaTL.Size = new System.Drawing.Size(95, 18);
+            this.lblMaTL.Size = new System.Drawing.Size(139, 18);
             this.lblMaTL.TabIndex = 10;
-            this.lblMaTL.Text = "Mã Tài Liệu";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "MaTL";
-            this.Column1.HeaderText = "Mã TL";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "NhanDe";
-            this.Column2.HeaderText = "Nhan Đề";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "TacGia";
-            this.Column3.HeaderText = "Tác Giả";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "NgayMuon";
-            this.Column4.HeaderText = "Ngày Mượn";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.DataPropertyName = "NgayTra";
-            this.Column5.HeaderText = "Ngày Trả";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.DataPropertyName = "HanTra";
-            this.Column7.HeaderText = "Hạn Trả";
-            this.Column7.Name = "Column7";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.DataPropertyName = "GhiChu";
-            this.Column6.HeaderText = "Ghi Chú";
-            this.Column6.Name = "Column6";
+            this.lblMaTL.Text = "Nhập Mã Tài Liệu";
             // 
             // frmTraSach
             // 

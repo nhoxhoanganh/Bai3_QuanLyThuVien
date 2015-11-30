@@ -112,6 +112,17 @@ namespace BangThuVien
             b = dbcon.executeUpdateQuery(str, arrPara);
             return b;
         }
+        public bool UodateSoLuongTLID_TraSach(string _MaTL)
+        {
+            bool b = false;
+            string str = string.Format("Update TaiLieu set (SoLuong = SoLuong + 1) where (MaTL = @MaTL)");
+            SqlParameter[] arrPara = new SqlParameter[1];
+            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
+            arrPara[0].Value = _MaTL;
+
+            b = dbcon.executeUpdateQuery(str, arrPara);
+            return b;
+        }
         public DataTable HienThiTaiLieu()
         {
             string sql = "SELECT * FROM TaiLieu";

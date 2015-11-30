@@ -100,7 +100,6 @@ namespace QL_ThuVien
                         dt = new DataTable();
                         dt = pm.ThemPhieuMuon(txtMaBD.Text);
                         MaPM = dt.Rows[0]["MaPM"].ToString();
-                        MessageBox.Show(MaPM);
                         bool b = ctpm.ThemCTPM(MaPM, GTCB, DateTime.Now, DateTime.Now.AddMonths(6), "");
                         if (b == false)
                             MessageBox.Show("Thêm Thất Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
@@ -125,6 +124,11 @@ namespace QL_ThuVien
                 dgvSachDaMuon.Rows.RemoveAt(i);
             for (int i = 0; i < dgvSachMuon.Rows.Count; i++)
                 dgvSachMuon.Rows.RemoveAt(i);
+        }
+
+        private void txtMaBD_TextChanged(object sender, EventArgs e)
+        {
+            dgvSachDaMuon.DataSource = bd.ThongKeSachDaMuonTheoID(txtMaBD.Text);
         }
     }
 }

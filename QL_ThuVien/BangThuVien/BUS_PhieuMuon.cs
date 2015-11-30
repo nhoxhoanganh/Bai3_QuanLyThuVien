@@ -34,5 +34,16 @@ namespace BangThuVien
             //dt = dbcon.executeSelectProcedureQuery(str, arrpara);
             return dt;
         }
+        public void UpdateTTPM_TraSach(string _MaPM)
+        {
+            string str = string.Format("Update from PhieuMuon set TrangThai = -1 where MaPM = '" + _MaPM + "'");
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(str, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

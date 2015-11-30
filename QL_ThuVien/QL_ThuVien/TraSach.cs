@@ -29,24 +29,25 @@ namespace QL_ThuVien
 
         public void KhoiTaoTxt()
         {
-            txtHoTen.Text = txtCMND.Text = txtDiaChi.Text = txtEmail.Text = txtGT.Text = txtMaLop.Text = txtNS.Text = txtSoDT.Text = "";
+            txtMaBD.Text = txtHoTen.Text = txtCMND.Text = txtDiaChi.Text = txtEmail.Text = txtGT.Text = txtMaLop.Text = txtNS.Text = txtSoDT.Text = "";
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void TTBanDoc(string _MaTL)
         {
             KhoiTaoTxt();
-
-            string str = string.Format("Select * from BanDoc where MaBD like '%' + '" + txtMaBD.Text + "' + '%'");
-            SqlConnection con = new SqlConnection(AppConfig.connectionString());
             DataTable dt = new DataTable();
+            string str = string.Format("TTBanDoc");
+            SqlConnection con = new SqlConnection(AppConfig.connectionString());
             con.Open();
 
             SqlCommand cmd = new SqlCommand(str, con);
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaTL", _MaTL);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
             if (dt.Rows.Count > 0)
             {
+                txtMaBD.Text = dt.Rows[0]["MaBD"].ToString();
                 txtHoTen.Text = dt.Rows[0]["Hoten"].ToString();
                 txtGT.Text = dt.Rows[0]["GioiTinh"].ToString();
                 txtNS.Text = dt.Rows[0]["NgaySinh"].ToString();
@@ -86,12 +87,12 @@ namespace QL_ThuVien
                 txtTheLoai.Text = dt.Rows[0]["TenTheLoai"].ToString();
             }
             con.Close();
-            
+            TTBanDoc(txtMaTL.Text);
         }
 
         private void btnTra_Click(object sender, EventArgs e)
         {
-            
+            //pm.UpdateTTPM_TraSach()
         }
     }
 }
