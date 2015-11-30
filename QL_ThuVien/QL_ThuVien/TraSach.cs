@@ -95,6 +95,7 @@ namespace QL_ThuVien
             pm.UpdateTrangThaiPM_TraSach(txtMaTL.Text);
             if (tl.UodateSoLuongTLID_TraSach(txtMaTL.Text) == true)
             {
+                dgvSachDaMuon.DataSource = bd.ThongKeSachDaMuonTheoID(txtMaBD.Text);
                 if (MessageBox.Show("Trả Sách Hoàn Tất. Bạn có muốn tiếp tục?", "Question", MessageBoxButtons.YesNo) == DialogResult.No)
                     this.Close();
             }
