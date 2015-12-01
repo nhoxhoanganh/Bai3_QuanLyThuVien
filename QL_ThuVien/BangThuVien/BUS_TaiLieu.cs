@@ -68,48 +68,68 @@ namespace BangThuVien
             get { return tacgia; }
             set { tacgia = value; }
         }
-        public DataTable TimKiemTLID(string _MaTL)
+        public DataTable TimKiemSachID(string _MaSach)
         {
             DataTable dt = new DataTable();
-            string str = string.Format("Select * from TaiLieu where (MaTL = @MaTL)");
+            string str = string.Format(@"SELECT     dbo.DauSach.*, dbo.Sach.MaSach
+                                        FROM         dbo.Sach INNER JOIN
+                                                              dbo.DauSach ON dbo.Sach.MaDauSach = dbo.DauSach.MaDauSach
+                                        WHERE     (dbo.Sach.MaSach = @MaSach)");
             SqlParameter[] arrPara = new SqlParameter[1];
-            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
-            arrPara[0].Value = _MaTL;
+            arrPara[0] = new SqlParameter("@MaSach", SqlDbType.NVarChar, 10);
+            arrPara[0].Value = _MaSach;
 
             dt = dbcon.executeSelectQuery(str, arrPara);
             return dt;
         }
-        public DataTable TimKiemGTCBTheoMaTL(string _MaTL)
+        public DataTable TimKiemMaSachHopLe(string _MaSach)
         {
             DataTable dt = new DataTable();
-            string str = string.Format("Select GTCB from GiaTriCaBiet where (MaTL = @MaTL)");
+            string str = string.Format("Select MaSach from Sach where (MaSach = @MaSach)");
             SqlParameter[] arrPara = new SqlParameter[1];
-            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
-            arrPara[0].Value = _MaTL;
+            arrPara[0] = new SqlParameter("@MaSach", SqlDbType.NVarChar, 10);
+            arrPara[0].Value = _MaSach;
 
             dt = dbcon.executeSelectQuery(str, arrPara);
             return dt;
         }
-        public DataTable TimKiemSoLuongTLID(string _MaTL)
+        public DataTable TimKiemMaSachTheoMaDauSach(string _MaDauSach)
         {
             DataTable dt = new DataTable();
-            string str = string.Format("Select SoLuong from TaiLieu where (MaTL = @MaTL)");
+            string str = string.Format(@"SELECT     dbo.Sach.MaSach
+                                            FROM         dbo.Sach INNER JOIN
+                                                                  dbo.DauSach ON dbo.Sach.MaDauSach = dbo.DauSach.MaDauSach
+                                            WHERE     (dbo.DauSach.MaDauSach = @MaDauSach)");
             SqlParameter[] arrPara = new SqlParameter[1];
-            arrPara[0] = new SqlParameter("@MaTL", SqlDbType.NVarChar, 10);
-            arrPara[0].Value = _MaTL;
+            arrPara[0] = new SqlParameter("@MaDauSach", SqlDbType.NVarChar, 10);
+            arrPara[0].Value = _MaDauSach;
 
             dt = dbcon.executeSelectQuery(str, arrPara);
             return dt;
         }
-        public bool UodateSoLuongTLID(string _MaTL)
+        public DataTable TimKiemSoLuongDauSachID(string _MaSach)
         {
-            bool b = false;
+            DataTable dt = new DataTable();
+            string str = string.Format(@"SELECT     dbo.DauSach.SoLuong
+                                        FROM         dbo.Sach INNER JOIN
+                                                              dbo.DauSach ON dbo.Sach.MaDauSach = dbo.DauSach.MaDauSach
+                                        WHERE     (dbo.Sach.MaSach = @MaSach)");
+            SqlParameter[] arrPara = new SqlParameter[1];
+            arrPara[0] = new SqlParameter("@MaSach", SqlDbType.NVarChar, 10);
+            arrPara[0].Value = _MaSach;
+
+            dt = dbcon.executeSelectQuery(str, arrPara);
+            return dt;
+        }
+        public bool UodateSoLuongDauSachID(string _MaDauSach)
+        {
+            bool b = true;
             string str = string.Format("UpdateSLTL");
             SqlConnection con = new SqlConnection(AppConfig.connectionString());
             con.Open();
 
             SqlCommand cmd = new SqlCommand(str, con);
-            cmd.Parameters.AddWithValue("@MaTL", _MaTL);
+            cmd.Parameters.AddWithValue("@MaDS", _MaDauSach);
             cmd.Parameters.AddWithValue("@SoLuong", -1);
             cmd.CommandType = CommandType.StoredProcedure;
             if (cmd.ExecuteNonQuery() > 0)
@@ -119,13 +139,13 @@ namespace BangThuVien
         }
         public bool UodateSoLuongTLID_TraSach(string _MaTL)
         {
-            bool b = false;
+            bool b = true;
             string str = string.Format("UpdateSLTL");
             SqlConnection con = new SqlConnection(AppConfig.connectionString());
             con.Open();
 
             SqlCommand cmd = new SqlCommand(str, con);
-            cmd.Parameters.AddWithValue("@MaTL", _MaTL);
+            cmd.Parameters.AddWithValue("@MaDS", _MaTL);
             cmd.Parameters.AddWithValue("@SoLuong", 1);
             cmd.CommandType = CommandType.StoredProcedure;
             if (cmd.ExecuteNonQuery() > 0)
@@ -135,7 +155,7 @@ namespace BangThuVien
         }
         public DataTable HienThiTaiLieu()
         {
-            string sql = "SELECT * FROM TaiLieu";
+            string sql = "SELECT * FROM DauSach";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(KetNoi.connect());
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
@@ -184,12 +204,11 @@ namespace BangThuVien
 
         public void XoaTaiLieu(string MaTL)
         {
-            string sql = "Xoa_TL";
+            string sql = string.Format("Delete from DauSach where MaDauSach = '" + MaTL + "'");
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@MaTL", MaTL);
+            cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();

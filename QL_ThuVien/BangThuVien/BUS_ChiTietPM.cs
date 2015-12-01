@@ -13,15 +13,15 @@ namespace BangThuVien
     public class BUS_ChiTietPM
     {
         dbConnection dbcon = new dbConnection();
-        public bool ThemCTPM(string MaPM, string GTCB, DateTime NgayMuon, DateTime HanTra, string Ghichu)
+        public bool ThemCTPM(string MaPM, string MaSach, DateTime NgayMuon, DateTime HanTra, string Ghichu)
         {
             bool b = false;
-            string sql = string.Format("Insert into CHITIETPHIEUMUON (MaPM, GTCB, NgayMuon, HanTra, GhiChu) values ( @MaPM, @GTCB, @NgayMuon, @HanTra, @GhiChu )");
+            string sql = string.Format("Insert into CHITIETPHIEUMUON (MaPM, MaSach, NgayMuon, HanTra, GhiChu) values ( @MaPM, @MaSach, @NgayMuon, @HanTra, @GhiChu )");
             SqlParameter[] arr = new SqlParameter[5];
             arr[0] = new SqlParameter("@MaPM", SqlDbType.NVarChar, 10);
             arr[0].Value = MaPM;
-            arr[1] = new SqlParameter("@GTCB", SqlDbType.NVarChar, 10);
-            arr[1].Value = GTCB;
+            arr[1] = new SqlParameter("@MaSach", SqlDbType.NVarChar, 10);
+            arr[1].Value = MaSach;
             arr[2] = new SqlParameter("@NgayMuon", SqlDbType.Date);
             arr[2].Value = NgayMuon;
             arr[3] = new SqlParameter("@HanTra", SqlDbType.Date);

@@ -16,13 +16,13 @@ namespace BangThuVien
         // Tìm kiếm Tài liệu theo mã
         public DataTable TKTL_MaTL(string MaTL)
         {
-            string sql = "SELECT * FROM TaiLieu WHERE MaTL LIKE N'%' + @MaTL + '%'";
+            string sql = "SELECT * FROM DauSach WHERE MaDauSach LIKE N'%' + @MaDauSach + '%'";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter da = new SqlDataAdapter();
-            cmd.Parameters.AddWithValue("@MaTL", MaTL);
+            cmd.Parameters.AddWithValue("@MaDauSach", MaTL);
             da.SelectCommand = cmd;
             da.Fill(dt);
             return dt;
@@ -32,7 +32,7 @@ namespace BangThuVien
         // Tìm kiếm tài liệu theo nhan đề
         public DataTable TKTL_NhanDe(string NhanDe)
         {
-            string sql = "SELECT * FROM TaiLieu WHERE NhanDe LIKE N'%' + @NhanDe + '%'";
+            string sql = "SELECT * FROM DauSach WHERE NhanDe LIKE N'%' + @NhanDe + '%'";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();
@@ -46,7 +46,7 @@ namespace BangThuVien
         // Tìm kiếm tài liệu theo tác giả
         public DataTable TKTL_TacGia(string TacGia)
         {
-            string sql = "SELECT * FROM TaiLieu WHERE TacGia LIKE N'%' + @TacGia + '%'";
+            string sql = "SELECT * FROM DauSach WHERE TacGia LIKE N'%' + @TacGia + '%'";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(KetNoi.connect());
             con.Open();

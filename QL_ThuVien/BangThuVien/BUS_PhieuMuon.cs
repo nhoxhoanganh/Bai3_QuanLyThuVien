@@ -45,15 +45,15 @@ namespace BangThuVien
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        public void UpdateTrangThaiPM_TraSach(string _MaTL)
+        public void UpdateTrangThaiPM_TraSach(string _MaSach)
         {
             DataTable dt = new DataTable();
-            string str = string.Format("LayMaPM_MaTL");
+            string str = string.Format("LayMaPM_MaSach");
             SqlConnection con = new SqlConnection(AppConfig.connectionString());
             con.Open();
 
             SqlCommand cmd = new SqlCommand(str, con);
-            cmd.Parameters.AddWithValue("@MaTL", _MaTL);
+            cmd.Parameters.AddWithValue("@MaSach", _MaSach);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);

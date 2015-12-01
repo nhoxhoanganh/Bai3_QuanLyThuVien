@@ -35,31 +35,34 @@ namespace QL_ThuVien
                 MessageBox.Show("Chưa có mã tài liệu!");
             else if(bd.TimKiemBDID(txtMaBD.Text).Rows.Count < 1)
                 MessageBox.Show("Mã Bạn Đọc Không Tồn Tại!");
-            else if(tl.TimKiemTLID(txtMaTL.Text).Rows.Count < 1)
-                MessageBox.Show("Mã Tài Liệu Không Tồn Tại!");
+            else if(tl.TimKiemSachID(txtMaTL.Text).Rows.Count < 1)
+                MessageBox.Show("Mã Tài Liệu Không Tồn Tại trong CSDL!");
             else
             {
                 dgvSachDaMuon.DataSource = bd.ThongKeSachDaMuonTheoID(txtMaBD.Text);
-                DataTable dt = tl.TimKiemSoLuongTLID(txtMaTL.Text);
-                if(int.Parse(dt.Rows[0]["SoLuong"].ToString()) < 1)
-                    MessageBox.Show("Tài Liệu Này Hiện Đã Hết!");
-                else
+                DataTable dt = tl.TimKiemSoLuongDauSachID(txtMaTL.Text);
+                if (dt.Rows.Count > 0)
                 {
-                    tl = new BUS_TaiLieu();
-                    DataTable bangtam = new DataTable();
+                    if (int.Parse(dt.Rows[0]["SoLuong"].ToString()) < 1)
+                        MessageBox.Show("Tài Liệu Này Hiện Đã Hết!");
+                    else
+                    {
+                        tl = new BUS_TaiLieu();
+                        DataTable bangtam = new DataTable();
 
-                    bangtam = tl.TimKiemTLID(txtMaTL.Text);
-                    tl.Matl = bangtam.Rows[0]["MaTL"].ToString();
-                    tl.Nhande = bangtam.Rows[0]["NhanDe"].ToString();
-                    tl.Tacgia = bangtam.Rows[0]["TacGia"].ToString();
-                    tl.Soluong = int.Parse(bangtam.Rows[0]["SoLuong"].ToString());
-                    tl.Domat = int.Parse(bangtam.Rows[0]["DoMat"].ToString());
-                    tl.Ngonngu = bangtam.Rows[0]["NgonNgu"].ToString();
-                    tl.MaTheLoai = bangtam.Rows[0]["MaTheLoai"].ToString();
-                    tl.MaNXB = bangtam.Rows[0]["MaNXB"].ToString();
+                        bangtam = tl.TimKiemSachID(txtMaTL.Text);
+                        tl.Matl = bangtam.Rows[0]["MaDauSach"].ToString();
+                        tl.Nhande = bangtam.Rows[0]["NhanDe"].ToString();
+                        tl.Tacgia = bangtam.Rows[0]["TacGia"].ToString();
+                        tl.Soluong = int.Parse(bangtam.Rows[0]["SoLuong"].ToString());
+                        tl.Domat = int.Parse(bangtam.Rows[0]["DoMat"].ToString());
+                        tl.Ngonngu = bangtam.Rows[0]["NgonNgu"].ToString();
+                        tl.MaTheLoai = bangtam.Rows[0]["MaTheLoai"].ToString();
+                        tl.MaNXB = bangtam.Rows[0]["MaNXB"].ToString();
 
-                    listTLMuon.Add(tl);
-                    Show(dgvSachMuon);
+                        listTLMuon.Add(tl);
+                        Show(dgvSachMuon);
+                    }
                 }
             }
         }
@@ -82,32 +85,19 @@ namespace QL_ThuVien
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
+            string MaPM = "";
+            DataTable dt = new DataTable();
+            dt = pm.ThemPhieuMuon(txtMaBD.Text);
+            MaPM = dt.Rows[0]["MaPM"].ToString();
+
             for (int i = 0; i < dgvSachMuon.Rows.Count; i++)
             {
-                DataTable dt = new DataTable();
-                dt = tl.TimKiemSoLuongTLID(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
-
-                if (int.Parse(dt.Rows[0]["SoLuong"].ToString()) >= 1)
-                {
-                    dt = new DataTable();
-                    dt = tl.TimKiemGTCBTheoMaTL(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
-                    if (dt.Rows.Count >= 1)
-                    {
-                        string GTCB = "";
-                        GTCB = dt.Rows[0]["GTCB"].ToString();                    
-
-                        string MaPM = "";
-                        dt = new DataTable();
-                        dt = pm.ThemPhieuMuon(txtMaBD.Text);
-                        MaPM = dt.Rows[0]["MaPM"].ToString();
-                        bool b = ctpm.ThemCTPM(MaPM, GTCB, DateTime.Now, DateTime.Now.AddMonths(6), "");
-                        if (b == false)
-                            MessageBox.Show("Thêm Thất Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
-                        tl.UodateSoLuongTLID(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
-                    }
-                    else
-                        MessageBox.Show("Không tìm thấy giá trị cá biệt khớp");
-                }
+                dt = tl.TimKiemMaSachTheoMaDauSach(dgvSachMuon.Rows[i].Cells[0].Value.ToString());
+                string MaSach = dt.Rows[0]["MaSach"].ToString();
+                bool b = ctpm.ThemCTPM(MaPM, MaSach, DateTime.Now, DateTime.Now.AddMonths(6), "");
+                if (b == false)
+                    MessageBox.Show("Thêm Thất Bại Cuốn :" + dgvSachMuon.Rows[i].Cells[0].Value.ToString());
+                tl.UodateSoLuongDauSachID(dgvSachMuon.Rows[i].Cells[0].Value.ToString());              
             }
 
             if (MessageBox.Show("Mượn Thành công! Có Muốn kết thúc??", "Question", MessageBoxButtons.YesNo) == DialogResult.Yes)

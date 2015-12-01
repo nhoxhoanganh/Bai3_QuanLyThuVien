@@ -31,7 +31,7 @@ namespace QL_ThuVien
         {
             txtMaBD.Text = txtHoTen.Text = txtCMND.Text = txtDiaChi.Text = txtEmail.Text = txtGT.Text = txtMaLop.Text = txtNS.Text = txtSoDT.Text = "";
         }
-        public void TTBanDoc(string _MaTL)
+        public void TTBanDoc(string _MaSach)
         {
             KhoiTaoTxt();
             DataTable dt = new DataTable();
@@ -41,7 +41,7 @@ namespace QL_ThuVien
 
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@MaTL", _MaTL);
+            cmd.Parameters.Add("@MaSach", _MaSach);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
@@ -66,11 +66,12 @@ namespace QL_ThuVien
         {
             txtNhanDe.Text = txttacGia.Text = txtTheLoai.Text = txtNXB.Text = "";
 
-            string str = string.Format(@"SELECT     dbo.TaiLieu.NhanDe, dbo.TaiLieu.TacGia, dbo.TheLoai.TenTheLoai, dbo.NXB.TenNXB
-                                            FROM         dbo.TaiLieu INNER JOIN
-                                                            dbo.TheLoai ON dbo.TaiLieu.MaTheLoai = dbo.TheLoai.MaTheLoai INNER JOIN
-                                                            dbo.NXB ON dbo.TaiLieu.MaNXB = dbo.NXB.MaNXB 
-                                            where MaTL like '%' + '" + txtMaTL.Text + "' + '%'");
+            string str = string.Format(@"SELECT     dbo.DauSach.NhanDe, dbo.DauSach.TacGia, dbo.TheLoai.TenTheLoai, dbo.NXB.TenNXB
+                                        FROM         dbo.DauSach INNER JOIN
+                                                              dbo.TheLoai ON dbo.DauSach.MaTheLoai = dbo.TheLoai.MaTheLoai INNER JOIN
+                                                              dbo.Sach ON dbo.DauSach.MaDauSach = dbo.Sach.MaDauSach INNER JOIN
+                                                              dbo.NXB ON dbo.DauSach.MaNXB = dbo.NXB.MaNXB
+                                        WHERE     dbo.Sach.MaSach like '%' + '" + txtMaTL.Text + "' + '%'");
             SqlConnection con = new SqlConnection(AppConfig.connectionString());
             DataTable dt = new DataTable();
             con.Open();
@@ -92,7 +93,7 @@ namespace QL_ThuVien
 
         private void btnTra_Click(object sender, EventArgs e)
         {
-            pm.UpdateTrangThaiPM_TraSach(txtMaTL.Text);
+            //pm.UpdateTrangThaiPM_TraSach(txtMaTL.Text);
             if (tl.UodateSoLuongTLID_TraSach(txtMaTL.Text) == true)
             {
                 dgvSachDaMuon.DataSource = bd.ThongKeSachDaMuonTheoID(txtMaBD.Text);

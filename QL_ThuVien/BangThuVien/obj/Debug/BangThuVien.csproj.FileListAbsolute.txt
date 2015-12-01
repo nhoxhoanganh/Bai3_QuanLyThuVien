@@ -44,3 +44,10 @@ C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.pdb
 C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.csprojResolveAssemblyReference.cache
 C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.dll
 C:\Users\PhamVanLuong^^\Documents\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.pdb
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.dll
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\BangThuVien.pdb
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.dll
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\bin\Debug\KetNoiDB.pdb
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.csprojResolveAssemblyReference.cache
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.dll
+C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\BangThuVien\obj\Debug\BangThuVien.pdb
