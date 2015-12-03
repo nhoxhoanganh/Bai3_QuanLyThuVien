@@ -131,3 +131,8 @@ C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\D
 C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTAILIEU.resources
 C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.Properties.Resources.resources
 C:\Users\PhamVanLuong^^\Documents\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.csproj.GenerateResource.Cache
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmDangNhap.resources
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.HuongDan.resources
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmTraSach.resources
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.MuonSach.resources
+E:\Clone\Bai3_QuanLyThuVien\QL_ThuVien\QL_ThuVien\obj\Debug\QL_ThuVien.frmQLThuVien.resources

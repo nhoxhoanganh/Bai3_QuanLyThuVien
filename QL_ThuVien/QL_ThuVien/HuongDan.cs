@@ -55,12 +55,6 @@ namespace QL_ThuVien
                 Image img = Image.FromFile(@"b3 MuonSach.png");
                 pictureBox1.BackgroundImage = img;
             }
-            else if (e.Node.Name == "gtQLThuVien")
-            {
-                GetFileAll("PhanQLThuVien.txt");
-                Image img = Image.FromFile(@"b3 QLThuVien.png");
-                pictureBox1.BackgroundImage = img;
-            }
             else if (e.Node.Name == "gtTaiLieu")
             {
                 GetFileAll("PhanTaiLieu.txt");
