@@ -34,13 +34,13 @@ namespace QL_ThuVien
             else if (e.Node.Name == "gtDangNhap")
             {
                 GetFileAll("PhanDangNhap.txt");
-                Image img = Image.FromFile(@"b3 anh dang nhap.png");
+                Image img = Image.FromFile(@"b3 dang nhap.png");
                 pictureBox1.BackgroundImage = img;
             }
             else if (e.Node.Name == "gtManHinhChinh")
             {
                 GetFileAll("PhanMain.txt");
-                Image img = Image.FromFile(@"b3 anh main.png");
+                Image img = Image.FromFile(@"b3 main.png");
                 pictureBox1.BackgroundImage = img;
             }
             else if (e.Node.Name == "gtDocGia")

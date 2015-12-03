@@ -32,19 +32,15 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Màn hình chính");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Quản lý độc giả");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Quản lý mượn sách");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Quản lý thư viện");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Quản lý tài liệu");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Trả sách");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Các chức năng", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Trả sách");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Các chức năng", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Giới thiệu phần mềm", new System.Windows.Forms.TreeNode[] {
-            treeNode8});
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Giới thiệu phần mềm", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtGioiThieu = new System.Windows.Forms.TextBox();
@@ -64,20 +60,17 @@
             treeNode3.Text = "Quản lý độc giả";
             treeNode4.Name = "gtMuonSach";
             treeNode4.Text = "Quản lý mượn sách";
-            treeNode5.Name = "gtQLThuVien";
-            treeNode5.Text = "Quản lý thư viện";
-            treeNode6.Name = "gtTaiLieu";
-            treeNode6.Text = "Quản lý tài liệu";
-            treeNode7.Name = "gtTraSach";
-            treeNode7.Text = "Trả sách";
-            treeNode8.Name = "gtChucNang";
-            treeNode8.Text = "Các chức năng";
-            treeNode9.Name = "gtPhanMem";
-            treeNode9.Text = "Giới thiệu phần mềm";
+            treeNode5.Name = "gtTraSach";
+            treeNode5.Text = "Trả sách";
+            treeNode6.Name = "gtChucNang";
+            treeNode6.Text = "Các chức năng";
+            treeNode7.Name = "gtPhanMem";
+            treeNode7.Text = "Giới thiệu phần mềm";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9});
+            treeNode7});
             this.treeView1.Size = new System.Drawing.Size(172, 478);
             this.treeView1.TabIndex = 2;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trViewGioiThieu_AfterSelect);
             // 
             // pictureBox1
             // 
